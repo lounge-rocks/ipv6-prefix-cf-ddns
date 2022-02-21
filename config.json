@@ -1,0 +1,14 @@
+{
+    "host": "localhost",
+    "port": "8000",
+    "token": "[CloudFlare API Token]",
+    "zones": {
+        "[domain]": {
+            "zone_id": "[Zone ID]",
+            "hosts": {
+                "00:00:00:00:00:00": { "name": "pc_01", "proxied": false },
+                "00:00:00:00:00:01": { "name": "pc_02", "proxied": true }
+            }
+        }
+    }
+}

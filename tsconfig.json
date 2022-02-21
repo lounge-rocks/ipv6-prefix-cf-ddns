@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "target": "ES2019"
+  },
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "files": ["index.ts"]
+}

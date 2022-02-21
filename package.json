@@ -1,0 +1,24 @@
+{
+    "name": "ipv6-prefix-cf-ddns",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "luksab & mayniklas",
+    "license": "GPL-3.0-or-later",
+    "devDependencies": {
+        "@tsconfig/node16": "^1.0.2",
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/node": "^17.0.19",
+        "@types/source-map-support": "^0.5.4",
+        "@typescript-eslint/eslint-plugin": "^5.8.1",
+        "eslint": "^8.5.0",
+        "source-map-support": "^0.5.21",
+        "typescript": "^4.5.4"
+    },
+    "dependencies": {
+        "cloudflare": "^2.9.1"
+    }
+}
