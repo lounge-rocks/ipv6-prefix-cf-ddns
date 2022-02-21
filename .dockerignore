@@ -1,0 +1,9 @@
+.dockerignore
+.git
+.gitignore
+.prettierrc
+dist
+docker-compose.yml
+Dockerfile
+node_modules
+shell.nix

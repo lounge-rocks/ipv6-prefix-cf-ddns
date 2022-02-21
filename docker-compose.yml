@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ipv6-prefix-cf-ddns:
+    build: .
+    image: ipv6-ddns
+    container_name: ipv6-prefix-cf-ddns
+    volumes:
+      - ./config.json:/app/config.json:ro
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
