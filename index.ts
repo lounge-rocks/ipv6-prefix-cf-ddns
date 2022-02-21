@@ -192,7 +192,7 @@ function ip6null(): number[] {
 }
 
 function dec2hex(val: number): string {
-    return parseInt(Math.floor(val)).toString(16).toUpperCase();
+    return Math.floor(val).toString(16).toUpperCase();
 }
 
 //convert hex to decimal
