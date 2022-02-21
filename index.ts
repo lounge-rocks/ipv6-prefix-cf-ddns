@@ -1,26 +1,5 @@
 import { createServer, IncomingMessage, ServerResponse } from "http";
 import { host, port, token, zones } from "./config.json";
-// const host = "localhost";
-// const port = 8000;
-// const token = "R8Ga7seyMgJzlztFKlv6PQXmPoqmleulAGA8D1in";
-// const zones = {
-//     "onlyf1nns.com": {
-//         zone_id: "32edd1c84369f31d57c08f0eea94de14",
-//         hosts: {
-//             "00:00:00:00:00:00": { name: "pc_01", proxied: false },
-//             "00:00:00:00:00:01": { name: "pc_02", proxied: true },
-//         },
-//     },
-//     // office: {
-//     //     zone_id: "cf_office_id",
-//     //     Macs: {
-//     //         "00:00:00:00:00:02": "placeholder",
-//     //         "00:00:00:00:00:03": "placeholder",
-//     //     },
-//     // },
-// };
-
-console.log(mactoeui("00:00:00:00:00:00"));
 
 var cf = require("cloudflare")({
     token: token,
@@ -43,9 +22,7 @@ const server = createServer(
             return response.end("Invalid request");
         }
         const zone_name = args[1];
-        console.log(args[2]);
         const prefix = get_prefix(args[2]);
-        console.log(prefix);
 
         if (hasKey(zones, zone_name)) {
             const zone_id = zones[zone_name].zone_id;
