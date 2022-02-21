@@ -192,42 +192,7 @@ function ip6null(): number[] {
 }
 
 function dec2hex(val: number): string {
-    var str = "";
-    var minus = false;
-    if (val < 0) {
-        minus = true;
-        val *= -1;
-    }
-    val = Math.floor(val);
-    while (val > 0) {
-        var v = (val % 16).toString();
-        val /= 16;
-        val = Math.floor(val);
-        switch (v) {
-            case "10":
-                v = "A";
-                break;
-            case "11":
-                v = "B";
-                break;
-            case "12":
-                v = "C";
-                break;
-            case "13":
-                v = "D";
-                break;
-            case "14":
-                v = "E";
-                break;
-            case "15":
-                v = "F";
-                break;
-        }
-        str = v + str;
-    }
-    if (str == "") str = "0";
-    if (minus) str = "-" + str;
-    return str;
+    return parseInt(Math.floor(val)).toString(16).toUpperCase();
 }
 
 //convert hex to decimal
